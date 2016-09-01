@@ -1,0 +1,88 @@
+body{
+    font-family: 'Helvetica Neue', Helvetica, Arial, 'lucida grande', tahoma, verdana, arial, sans-serif;
+}
+.embeddableMatchSummary.clubSidebarWidget.fixturesAbridgedContainer{
+    margin:0 auto;
+    width:100%;
+    float:right;
+    text-align:center;
+}
+.tablesContainer{
+    width: 80%;
+    border:1px solid;
+}
+.matchAbridged:focus, .matchAbridged:hover{
+    background: #008000;
+}
+.badge-25{
+    background-image: url("https://resources-pl.pulselive.com/ver/i/sprites/badges-25-sprite.png");
+}
+.badge-20{
+    background-image: url("https://resources-pl.pulselive.com/ver/i/sprites/badges-20-sprite.png");
+}
+.predictionButton{
+    left:0px;
+}
+.fixturesAbridgedHeader .competitionImage1
+{
+    background-image: url("https://resources-pl.pulselive.com/ver/i/sprites/global-sprite.png");
+}
+a.btn.clubColourBtn,a.btn{
+    visibility: hidden;
+}
+.predictForm{
+    position: relative;
+    left:-36px;
+    border: 3px solid #31708f;
+    border-radius: 9px;
+    box-shadow: 2px 2px 2px 2px;
+    background: #f5f5f5;
+}
+.fixturesAbridgedHeader:before{
+    background: #008000;
+}
+.predictForm .fixturesAbridgedHeader header .week{
+    visibility: hidden;
+}
+.fixturesAbridgedHeader{
+    background: #f5f5f5;
+}
+.topStats{
+    background: whitesmoke url('https://pbs.twimg.com/profile_images/741262443469381634/MK7kKf7K.jpg');
+    background-position-y: -40px;
+    filter: blur(12px);
+    position: relative;
+    left: -34px;
+    border-radius: 9px;
+    padding: 14px;
+    font-size: 14px;
+}
+p.text-center{
+    font-size:22px;
+    color:#fff;
+}
+.topStats h3{
+     font-size:16px;
+ }
+.topStats a{
+    color:#000;
+}
+.stat-sequence{
+    height:83%;
+}
+div#myModal{
+    position:absolute;
+    top:103px;
+}
+@media screen and (max-width: 480px) {
+    .embeddableMatchSummary.clubSidebarWidget.fixturesAbridgedContainer{
+        text-align: center;
+    }
+    .tablesContainer{
+        width: 100%;
+    }
+    div#myModal{
+        position:absolute;
+        top:103px;
+    }
+}
