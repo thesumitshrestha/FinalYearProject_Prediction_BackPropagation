@@ -28,7 +28,7 @@
   <script src="js/drop.js"></script>
   <script type="text/javascript">
     $(document).ready(function() {
-      var homeTeam = ["Accrington Stanley", "AFC Bournemouth", "AFC Telford United", "AFC Wimbledon", "Aldershot Town", "Altrincham", "Arsenal", "Aston Villa", "Barnet", "Barnsley", "Barrow", "Basingstoke Town", "Bath City", "Berwick Rangers", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Boreham Wood", "Boston United", "Bradford City", "Braintree Town", "Brentford", "Brighton & Hove Albion", "Bristol City", "Bristol Rovers", "Bromley", "Burnley", "Burton Albion", "Bury", "Cambridge United", "Cardiff City", "Carlisle United", "Charlton Athletic", "Chelsea", "Cheltenham Town", "Chester", "Chesterfield", "Colchester United", "Coventry City", "Crawley Town", "Crewe Alexandra", "Crystal Palace", "Dagenham & Redbridge", "Derby County", "Doncaster Rovers", "Doncaster Rovers Belles", "Dover Athletic", "Eastleigh", "Ebbsfleet United", "Everton", "Exeter City", "Farnborough", "Fleetwood Town", "Forest Green Rovers", "Fulham", "Gateshead", "Gillingham", "Grimsby Town", "Guiseley", "Halifax Town", "Hartlepool United", "Havant & Waterlooville", "Hereford FC", "Huddersfield Town", "Hull City", "Ipswich Town", "Kidderminster Harriers", "Kingstonian", "Leeds United", "Leicester City", "Leyton Orient", "Lincoln City", "Liverpool", "London Bees", "Luton Town", "Macclesfield Town", "Manchester City", "Manchester United", "Mansfield Town", "Middlesbrough", "Millwall", "Millwall Lionesses", "Milton Keynes Dons", "Morecambe", "Newcastle United", "Newport County", "Northampton Town", "Norwich City", "Nottingham Forest", "Notts County", "Oldham Athletic", "Oxford United", "Peterborough United", "Plymouth Argyle", "Port Vale", "Portsmouth", "Preston North End", "Queens Park Rangers", "Reading", "Rochdale", "Rotherham United", "Scunthorpe United", "Sheffield United", "Sheffield Wednesday", "Shrewsbury Town", "Southampton", "Southend United", "Southport", "Stalybridge Celtic", "Stevenage", "Stockport County", "Stoke City", "Sunderland", "Sutton United", "Swansea City", "Swindon Town", "The New Saints", "Torquay United", "Tottenham Hotspur", "Tranmere Rovers", "Walsall", "Watford", "Welling United", "West Bromwich Albion", "West Ham United", "Widnes", "Wigan Athletic", "Woking", "Wolverhampton Wanderers", "Worcester City", "Wrexham", "Wycombe Wanderers", "Yeovil Town", "York City"
+      var homeTeam = ["Select","Accrington Stanley", "AFC Bournemouth", "AFC Telford United", "AFC Wimbledon", "Aldershot Town", "Altrincham", "Arsenal", "Aston Villa", "Barnet", "Barnsley", "Barrow", "Basingstoke Town", "Bath City", "Berwick Rangers", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Boreham Wood", "Boston United", "Bradford City", "Braintree Town", "Brentford", "Brighton & Hove Albion", "Bristol City", "Bristol Rovers", "Bromley", "Burnley", "Burton Albion", "Bury", "Cambridge United", "Cardiff City", "Carlisle United", "Charlton Athletic", "Chelsea", "Cheltenham Town", "Chester", "Chesterfield", "Colchester United", "Coventry City", "Crawley Town", "Crewe Alexandra", "Crystal Palace", "Dagenham & Redbridge", "Derby County", "Doncaster Rovers", "Doncaster Rovers Belles", "Dover Athletic", "Eastleigh", "Ebbsfleet United", "Everton", "Exeter City", "Farnborough", "Fleetwood Town", "Forest Green Rovers", "Fulham", "Gateshead", "Gillingham", "Grimsby Town", "Guiseley", "Halifax Town", "Hartlepool United", "Havant & Waterlooville", "Hereford FC", "Huddersfield Town", "Hull City", "Ipswich Town", "Kidderminster Harriers", "Kingstonian", "Leeds United", "Leicester City", "Leyton Orient", "Lincoln City", "Liverpool", "London Bees", "Luton Town", "Macclesfield Town", "Manchester City", "Manchester United", "Mansfield Town", "Middlesbrough", "Millwall", "Millwall Lionesses", "Milton Keynes Dons", "Morecambe", "Newcastle United", "Newport County", "Northampton Town", "Norwich City", "Nottingham Forest", "Notts County", "Oldham Athletic", "Oxford United", "Peterborough United", "Plymouth Argyle", "Port Vale", "Portsmouth", "Preston North End", "Queens Park Rangers", "Reading", "Rochdale", "Rotherham United", "Scunthorpe United", "Sheffield United", "Sheffield Wednesday", "Shrewsbury Town", "Southampton", "Southend United", "Southport", "Stalybridge Celtic", "Stevenage", "Stockport County", "Stoke City", "Sunderland", "Sutton United", "Swansea City", "Swindon Town", "The New Saints", "Torquay United", "Tottenham Hotspur", "Tranmere Rovers", "Walsall", "Watford", "Welling United", "West Bromwich Albion", "West Ham United", "Widnes", "Wigan Athletic", "Woking", "Wolverhampton Wanderers", "Worcester City", "Wrexham", "Wycombe Wanderers", "Yeovil Town", "York City"
       ];
       $("#homeTeam").select2({
         data: homeTeam
@@ -37,7 +37,7 @@
   </script>
   <script type="text/javascript">
     $(document).ready(function() {
-      var awayTeam = ["Accrington Stanley", "AFC Bournemouth", "AFC Telford United", "AFC Wimbledon", "Aldershot Town", "Altrincham", "Arsenal", "Aston Villa", "Barnet", "Barnsley", "Barrow", "Basingstoke Town", "Bath City", "Berwick Rangers", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Boreham Wood", "Boston United", "Bradford City", "Braintree Town", "Brentford", "Brighton & Hove Albion", "Bristol City", "Bristol Rovers", "Bromley", "Burnley", "Burton Albion", "Bury", "Cambridge United", "Cardiff City", "Carlisle United", "Charlton Athletic", "Chelsea", "Cheltenham Town", "Chester", "Chesterfield", "Colchester United", "Coventry City", "Crawley Town", "Crewe Alexandra", "Crystal Palace", "Dagenham & Redbridge", "Derby County", "Doncaster Rovers", "Doncaster Rovers Belles", "Dover Athletic", "Eastleigh", "Ebbsfleet United", "Everton", "Exeter City", "Farnborough", "Fleetwood Town", "Forest Green Rovers", "Fulham", "Gateshead", "Gillingham", "Grimsby Town", "Guiseley", "Halifax Town", "Hartlepool United", "Havant & Waterlooville", "Hereford FC", "Huddersfield Town", "Hull City", "Ipswich Town", "Kidderminster Harriers", "Kingstonian", "Leeds United", "Leicester City", "Leyton Orient", "Lincoln City", "Liverpool", "London Bees", "Luton Town", "Macclesfield Town", "Manchester City", "Manchester United", "Mansfield Town", "Middlesbrough", "Millwall", "Millwall Lionesses", "Milton Keynes Dons", "Morecambe", "Newcastle United", "Newport County", "Northampton Town", "Norwich City", "Nottingham Forest", "Notts County", "Oldham Athletic", "Oxford United", "Peterborough United", "Plymouth Argyle", "Port Vale", "Portsmouth", "Preston North End", "Queens Park Rangers", "Reading", "Rochdale", "Rotherham United", "Scunthorpe United", "Sheffield United", "Sheffield Wednesday", "Shrewsbury Town", "Southampton", "Southend United", "Southport", "Stalybridge Celtic", "Stevenage", "Stockport County", "Stoke City", "Sunderland", "Sutton United", "Swansea City", "Swindon Town", "The New Saints", "Torquay United", "Tottenham Hotspur", "Tranmere Rovers", "Walsall", "Watford", "Welling United", "West Bromwich Albion", "West Ham United", "Widnes", "Wigan Athletic", "Woking", "Wolverhampton Wanderers", "Worcester City", "Wrexham", "Wycombe Wanderers", "Yeovil Town", "York City"
+      var awayTeam = ["Select","Accrington Stanley", "AFC Bournemouth", "AFC Telford United", "AFC Wimbledon", "Aldershot Town", "Altrincham", "Arsenal", "Aston Villa", "Barnet", "Barnsley", "Barrow", "Basingstoke Town", "Bath City", "Berwick Rangers", "Birmingham City", "Blackburn Rovers", "Blackpool", "Bolton Wanderers", "Boreham Wood", "Boston United", "Bradford City", "Braintree Town", "Brentford", "Brighton & Hove Albion", "Bristol City", "Bristol Rovers", "Bromley", "Burnley", "Burton Albion", "Bury", "Cambridge United", "Cardiff City", "Carlisle United", "Charlton Athletic", "Chelsea", "Cheltenham Town", "Chester", "Chesterfield", "Colchester United", "Coventry City", "Crawley Town", "Crewe Alexandra", "Crystal Palace", "Dagenham & Redbridge", "Derby County", "Doncaster Rovers", "Doncaster Rovers Belles", "Dover Athletic", "Eastleigh", "Ebbsfleet United", "Everton", "Exeter City", "Farnborough", "Fleetwood Town", "Forest Green Rovers", "Fulham", "Gateshead", "Gillingham", "Grimsby Town", "Guiseley", "Halifax Town", "Hartlepool United", "Havant & Waterlooville", "Hereford FC", "Huddersfield Town", "Hull City", "Ipswich Town", "Kidderminster Harriers", "Kingstonian", "Leeds United", "Leicester City", "Leyton Orient", "Lincoln City", "Liverpool", "London Bees", "Luton Town", "Macclesfield Town", "Manchester City", "Manchester United", "Mansfield Town", "Middlesbrough", "Millwall", "Millwall Lionesses", "Milton Keynes Dons", "Morecambe", "Newcastle United", "Newport County", "Northampton Town", "Norwich City", "Nottingham Forest", "Notts County", "Oldham Athletic", "Oxford United", "Peterborough United", "Plymouth Argyle", "Port Vale", "Portsmouth", "Preston North End", "Queens Park Rangers", "Reading", "Rochdale", "Rotherham United", "Scunthorpe United", "Sheffield United", "Sheffield Wednesday", "Shrewsbury Town", "Southampton", "Southend United", "Southport", "Stalybridge Celtic", "Stevenage", "Stockport County", "Stoke City", "Sunderland", "Sutton United", "Swansea City", "Swindon Town", "The New Saints", "Torquay United", "Tottenham Hotspur", "Tranmere Rovers", "Walsall", "Watford", "Welling United", "West Bromwich Albion", "West Ham United", "Widnes", "Wigan Athletic", "Woking", "Wolverhampton Wanderers", "Worcester City", "Wrexham", "Wycombe Wanderers", "Yeovil Town", "York City"
       ];
       $("#awayTeam").select2({
         data: awayTeam
@@ -46,11 +46,11 @@
   </script>
   <script>
     $(document).ready(function () {
-      if("<% out.print( request.getAttribute("result") ); %>".length > 0){
-        $('#myModal').modal('show');
+      if("<% out.print( request.getAttribute("result") ); %>" == "null"){
+        $('#defaultModal').modal('show');
       }
       else{
-        $('#defaultModal').modal('show');
+        $('#myModal').modal('show');
       }
       $('#predict').click(function() {
         $.blockUI({
@@ -77,6 +77,56 @@
 
     });
   </script>
+  <script>
+    var ALERT_TITLE = "Premier League Game Result Prediction";
+    var ALERT_BUTTON_TEXT = "OK! Let Me Try Again";
+
+    if(document.getElementById) {
+      window.alert = function(txt) {
+        createCustomAlert(txt);
+      }
+    }
+
+    function createCustomAlert(txt) {
+      d = document;
+
+      if(d.getElementById("modalContainer")) return;
+
+      mObj = d.getElementsByTagName("body")[0].appendChild(d.createElement("div"));
+      mObj.id = "modalContainer";
+      mObj.style.height = d.documentElement.scrollHeight + "px";
+
+      alertObj = mObj.appendChild(d.createElement("div"));
+      alertObj.id = "alertBox";
+      if(d.all && !window.opera) alertObj.style.top = document.documentElement.scrollTop + "px";
+      alertObj.style.left = (d.documentElement.scrollWidth - alertObj.offsetWidth)/2 + "px";
+      alertObj.style.visiblity="visible";
+
+      h1 = alertObj.appendChild(d.createElement("h1"));
+      h1.appendChild(d.createTextNode(ALERT_TITLE));
+
+      msg = alertObj.appendChild(d.createElement("p"));
+      //msg.appendChild(d.createTextNode(txt));
+      msg.innerHTML = txt;
+
+      btn = alertObj.appendChild(d.createElement("a"));
+      btn.id = "closeBtn";
+      btn.appendChild(d.createTextNode(ALERT_BUTTON_TEXT));
+      btn.href = "#";
+      btn.focus();
+      btn.onclick = function() { removeCustomAlert();return false; }
+
+      alertObj.style.display = "block";
+
+    }
+
+    function removeCustomAlert() {
+      document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
+    }
+    </script>
+    <style>
+
+      </style>
 </head>
 
 <body style="background-image:url('http://img.wallpaperfolder.com/f/44D34A2C510C/premier-league.jpg') ">
@@ -145,29 +195,30 @@
           <div class="col-md-8">
             <h3 class="modal-title text-success pull-right">Result of Prediction</h3>
           </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           </div>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="background-color: whitesmoke">
           <h3 id="home">  </h3>
           <h1 id="homeWinner" class="text-success text-center"> ${result == 1? "Home Team Wins" : ""} </h1>
           <h1 id="result" class="text-success text-center"> ${result == 2? "Draw" : ""} </h1>
           <h1 id="away">  </h1>
           <h1 id="awayWinner" class="text-success text-center"> ${result == 3? "Away Team Wins" : ""} </h1>
         </div>
-        <div class="modal-footer">
+        <div class="modal-footer" style="background-color: whitesmoke">
+          <div class="col-md-2"></div>
           <div class="col-md-4">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta1Modal">View Adjusted Weight 1</button>
           </div>
           <div class="col-md-4">
             <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta2Modal">View Adjusted Weight 2</button>
           </div>
+          <div class="col-md-2"></div>
         </div>
       </div>
     </div>
   </div>
-
 
   <div class="modal fade" id="defaultModal" role="dialog">
     <div class="modal-dialog">
@@ -175,16 +226,21 @@
       <div class="modal-content">
         <div class="modal-header">
           <div class="col-md-8">
-            <h1 class="modal-title text-success pull-right">Welcome!!!</h1>
+            <h2 class="modal-title text-success pull-right">Welcome!!!</h2>
           </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           </div>
         </div>
-        <div class="modal-body">
-        <hp> Welcome to Premier League</p>
-        </div>
-        <div class="modal-footer">
+        <div class="modal-body" style="background-color: whitesmoke">
+        <h3> Welcome to Premier League Game Result Prediction. This application helps to predict the game result as win, lose or draw. <br><br><br>
+          Please Choose<strong> Home Team</strong> and <strong>Away Team</strong> to see the result.
+        </h3>
+          <br><br>
+          <%
+            Element latestNews = doc.select("a.heroThumb").first();
+            out.println(latestNews);
+          %>
 
         </div>
       </div>
@@ -200,11 +256,12 @@
           <div class="col-md-8">
             <h3 class="modal-title text-success pull-right">Adjusted Weight 1</h3>
           </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+            <%--<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>--%>
           </div>
         </div>
-        <div class="modal-body">
+        <div class="modal-body" style="background-color: whitesmoke">
           <%
             double [][] theta1Value  = (double[][]) request.getAttribute("theta1");
             String result="";
@@ -217,11 +274,6 @@
               }
             }
           %>
-        </div>
-        <div class="modal-footer">
-          <div class="col-md-4">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
         </div>
       </div>
     </div>
@@ -238,11 +290,12 @@
           <div class="col-md-8">
             <h3 class="modal-title text-success pull-right">Adjusted Weight 2</h3>
           </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>
+          <div class="col-md-4 no-pad">
+            <%--<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>--%>
+              <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           </div>
         </div>
-        <div class="modal-body">
+        <div class="modal-body style="background-color: whitesmoke"">
           <%
             double [][] theta2Value  = (double[][]) request.getAttribute("theta2");
             String resultTheta2="";
@@ -256,11 +309,6 @@
             }
           %>
         </div>
-        <div class="modal-footer">
-          <div class="col-md-4">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          </div>
-        </div>
       </div>
     </div>
   </div>
@@ -273,8 +321,12 @@
   function validateTeam(){
     var home = document.getElementById("homeTeam").value;
     var away = document.getElementById("awayTeam").value;
+    if(home == "Select" || away =="Select"){
+      alert ("Please Select Team First");
+      return false;
+    }
     if(home == away){
-      alert ("Team Name Cannot Be Same");
+      alert("Both Teams are Same");
       return false;
     }
     return true;

@@ -98,7 +98,6 @@ public class Main extends javax.servlet.http.HttpServlet {
             }
         }
 
-
         double [][] firstResultAfterBias = new double[input.length][transposeTheta1Matrix[0].length + 1];
         firstResultAfterBias[0][1] = 1;
         for(int i=0;i<input.length;i++)
@@ -112,7 +111,6 @@ public class Main extends javax.servlet.http.HttpServlet {
         System.out.println(firstResultAfterBias.length + "x" + firstResultAfterBias[0].length);
 
         double [][] theta2Transpose = new double[11][3];
-        System.out.println("here==============");
         //Transpose of a matrix
         for(int i=0;i<3;i++){
             for(int j=0;j<11;j++)
@@ -123,7 +121,6 @@ public class Main extends javax.servlet.http.HttpServlet {
         System.out.println("OSOSOS");
         double [][] finalResult = new double[firstResultAfterBias.length][theta2Transpose[0].length];
         System.out.println(finalResult.length + "x" + finalResult[0].length);
-        System.out.println("--------------------HERE-----------------------");
         for(int i=0;i<firstResultAfterBias.length;i++) {
             for(int j=0;j<theta2Transpose[0].length;j++){
                 finalResult[i][j] = 0.0;
@@ -141,7 +138,7 @@ public class Main extends javax.servlet.http.HttpServlet {
                 System.out.println(secondModifiedresult[i][j]);
             }
         }
-        if(secondModifiedresult[0][0] <= 0.99 && (secondModifiedresult[0][1] < 0.02 || secondModifiedresult[0][1] > 0.00000001)){
+        if(secondModifiedresult[0][0] <= 0.99 && (secondModifiedresult[0][1] < 0.02 || secondModifiedresult[0][1] > 0.00000001) && secondModifiedresult[0][2] > 0.01){
             System.out.println("Home team wins");
             secondModifiedresult[0][0] = 1;
             secondModifiedresult[0][1] = 0;
