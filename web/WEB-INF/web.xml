@@ -11,8 +11,16 @@
         <servlet-name>Main</servlet-name>
         <url-pattern>/predict</url-pattern>
     </servlet-mapping>
-    
+    <error-page>
+        <error-code>404</error-code>
+        <location>/error.html</location>
+    </error-page>
+    <error-page>
+        <exception-type>java.lang.Exception</exception-type>
+        <location>/noInternet.html</location>
+    </error-page>
     <welcome-file-list>
         <welcome-file>predict</welcome-file>
     </welcome-file-list>
+
 </web-app>

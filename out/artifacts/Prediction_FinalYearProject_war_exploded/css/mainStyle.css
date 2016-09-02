@@ -25,7 +25,7 @@ body{
 }
 .fixturesAbridgedHeader .competitionImage1
 {
-    background-image: url("https://resources-pl.pulselive.com/ver/i/sprites/global-sprite.png");
+    background: url("https://resources-pl.pulselive.com/ver/i/sprites/global-sprite.png") -807px -309px no-repeat;
 }
 a.btn.clubColourBtn,a.btn{
     visibility: hidden;
