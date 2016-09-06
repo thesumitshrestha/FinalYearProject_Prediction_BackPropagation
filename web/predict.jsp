@@ -11,6 +11,7 @@
 <%@ page import="org.jsoup.Jsoup" %>
 <%@ page import="org.jsoup.select.Elements" %>
 <%@ page import="org.jsoup.nodes.Element" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -132,6 +133,7 @@
 <body style="background-image:url('http://img.wallpaperfolder.com/f/44D34A2C510C/premier-league.jpg') ">
 <script src="js/blockUI.js"></script>
 
+
 <div class="container">
   <%
     Document doc = Jsoup.connect("https://www.premierleague.com/").get();
@@ -207,14 +209,10 @@
           <h1 id="awayWinner" class="text-success text-center"> ${result == 3? "Away Team Wins" : ""} </h1>
         </div>
         <div class="modal-footer" style="background-color: whitesmoke">
-          <div class="col-md-2"></div>
+          <div class="col-md-4"></div>
           <div class="col-md-4">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta1Modal">View Adjusted Weight 1</button>
+            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#details">View Details</button>
           </div>
-          <div class="col-md-4">
-            <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta2Modal">View Adjusted Weight 2</button>
-          </div>
-          <div class="col-md-2"></div>
         </div>
       </div>
     </div>
@@ -233,20 +231,115 @@
           </div>
         </div>
         <div class="modal-body" style="background-color: whitesmoke">
-        <h3> Welcome to Premier League Game Result Prediction. This application helps to predict the game result as win, lose or draw. <br><br><br>
-          Please Choose<strong> Home Team</strong> and <strong>Away Team</strong> to see the result.
-        </h3>
+        <h4 class="text-center"> Welcome to Premier League Game Result Prediction. </h4> <br>
+          <h4>This application helps to predict the game result as win, lose or draw. <br><br><br>
+          Please Choose<strong class="text-success"> Home Team</strong> and <strong class="text-success">Away Team</strong> to see the result.
+        </h4>
           <br><br>
           <%
             Element latestNews = doc.select("a.heroThumb").first();
             out.println(latestNews);
           %>
-
         </div>
       </div>
     </div>
   </div>
 
+  <div class="modal fade" id="details" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col-md-8">
+            <h2 class="modal-title text-success pull-right">Result Details</h2>
+          </div>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+          </div>
+        </div>
+        <div class="modal-body" style="background-color: whitesmoke">
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#team">Team Mapping</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta1Modal">Adjusted Weight 1</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#theta2Modal">Adjusted Weight 2</button>
+          <button type="button" class="btn btn-success" data-toggle="modal" data-target="#modifiedResult">Actual Result</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="team" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col-md-8">
+            <h2 class="modal-title text-success pull-right">Team Mapping</h2>
+          </div>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+          </div>
+        </div>
+        <div class="modal-body" style="background-color: whitesmoke">
+          <table class="table">
+            <thead>
+            <tr>
+              <th>Team</th>
+              <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+              <td>
+                <c:forEach items="${map}" var="team">
+                  ${team.key}<br>
+                </c:forEach>
+              </td>
+              <td>
+                <c:forEach items="${map}" var="team">
+                  ${team.value}<br>
+                </c:forEach>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal fade" id="modifiedResult" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <div class="col-md-8">
+            <h2 class="modal-title text-success pull-right">Actual Result</h2>
+          </div>
+          <div class="col-md-4 no-pad">
+            <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
+          </div>
+        </div>
+        <div class="modal-body" style="background-color: whitesmoke">
+          <%
+                double [][] modifiedResultss  = (double[][]) request.getAttribute("modifiedResult");
+                String result="";
+                if(modifiedResultss != null) {
+                  for (int i = 0; i < 1; i++) {
+                    for (int j = 0; j < 10; j++) {
+                      result = String.valueOf(modifiedResultss[i][j]);
+                      out.println(result);
+                      out.println("");
+                    }
+                  }
+                }
+          %>
+          ${modifiedResult}
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Theta Values -->
   <div class="modal fade" id="theta1Modal" role="dialog">
     <div class="modal-dialog">
@@ -264,12 +357,12 @@
         <div class="modal-body" style="background-color: whitesmoke">
           <%
             double [][] theta1Value  = (double[][]) request.getAttribute("theta1");
-            String result="";
+            String resultTheta1="";
             if(theta1Value != null){
               for(int i=0;i<10;i++) {
                 for (int j = 0; j < 3; j++) {
-                  result= String.valueOf(theta1Value[i][j]);
-                  out.println(result);
+                  resultTheta1= String.valueOf(theta1Value[i][j]);
+                  out.println(resultTheta1);
                 }
               }
             }
@@ -295,7 +388,7 @@
               <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           </div>
         </div>
-        <div class="modal-body style="background-color: whitesmoke"">
+        <div class="modal-body" style="background-color: whitesmoke">
           <%
             double [][] theta2Value  = (double[][]) request.getAttribute("theta2");
             String resultTheta2="";

@@ -25,6 +25,8 @@ public class Main extends javax.servlet.http.HttpServlet {
                 String[] team = line.split(cvsSplitBy);
                 //System.out.println(team[0] +" "+ team[1]);
                 map.put(team[1], Double.valueOf(team[0]));
+                //System.out.println(team[1]);
+                //System.out.println(team[0]);
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -60,7 +62,6 @@ public class Main extends javax.servlet.http.HttpServlet {
         MatrixMultiplication m = new MatrixMultiplication();
         double [][] oneMatrix = m.matrixMultiply(theta1DoubleArray, theta2DoubleArray);
         System.out.println(oneMatrix.length);
-        System.out.println("-----------------------HERE----------------------------------");
         theta1Reader.close();
         theta2Reader.close();
 
@@ -132,6 +133,8 @@ public class Main extends javax.servlet.http.HttpServlet {
 
         System.out.println("--------------RESULT--------------------");
         double  [][] secondModifiedresult = new double[firstResultAfterBias.length][theta2Transpose[0].length];
+        System.out.println(firstResult.length);
+        System.out.println(firstResult[0].length);
         for(int i = 0; i < finalResult.length; i++){
             for(int j = 0; j < finalResult[0].length; j++){
                 secondModifiedresult [i][j]= (1 / (1 + Math.pow(Math.E, (-1 * finalResult[i][j]))));
@@ -166,11 +169,12 @@ public class Main extends javax.servlet.http.HttpServlet {
         else{
             result = 3;
         }
-        System.out.println("HERERERERERERERERERERE");
+        request.setAttribute("theta1",theta1DoubleArray);
+        request.setAttribute("map",map);
         request.setAttribute("theta1",theta1DoubleArray);
         request.setAttribute("theta2",theta2DoubleArray);
+        request.setAttribute("modifiedResult",secondModifiedresult);
         request.setAttribute("result",result);
-        System.out.println("LASTTTT");
         request.getRequestDispatcher("/predict.jsp").forward(request,response);
 
     }
