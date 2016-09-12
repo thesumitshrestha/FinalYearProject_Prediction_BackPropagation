@@ -48,7 +48,13 @@ a.btn.clubColourBtn,a.btn{
     background: #f5f5f5;
 }
 .topStats{
+/*
     background: whitesmoke url('https://pbs.twimg.com/profile_images/741262443469381634/MK7kKf7K.jpg');
+*/
+    height:333px;
+    border: 1px solid black;
+    background: #4c5c6b;
+    box-shadow: 2px 2px 2px 2px;
     background-position-y: -40px;
     filter: blur(12px);
     position: relative;

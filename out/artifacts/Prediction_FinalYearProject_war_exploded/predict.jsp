@@ -125,9 +125,20 @@
       document.getElementsByTagName("body")[0].removeChild(document.getElementById("modalContainer"));
     }
     </script>
-    <style>
-
-      </style>
+  <style>
+    body{
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      background-color: #f7f7f7;
+      background-size: 100% !important;
+      background-position-y: 12px;
+    }
+    h1{
+      font-size: 74px;
+      color:red;
+    }
+  </style>
 </head>
 
 <body style="background-image:url('http://img.wallpaperfolder.com/f/44D34A2C510C/premier-league.jpg') ">
@@ -171,12 +182,17 @@
       <br>
       <div class="topStats">
         <h2 class="text-center" style="text-decoration: underline;color:#fff;"> <strong>Number of Titles Won </strong> </h2>
-        <p class="text-center">Manchester United - 13</p>
-        <p class="text-center">Chelsea - 4</p>
-        <p class="text-center">Arsenal - 3</p>
-        <p class="text-center">Manchester City - 2</p>
-        <p class="text-center">Blackburn - 1</p>
-        <p class="text-center">Leicester City - 1</p>
+        <div class="col-md-2"></div>
+        <div class="col-md-8">
+          <p class="text-center">Manchester United - 13</p>
+          <p class="text-center">Chelsea - 4</p>
+          <p class="text-center">Arsenal - 3</p>
+          <p class="text-center">Manchester City - 2</p>
+          <p class="text-center">Blackburn - 1</p>
+          <p class="text-center">Leicester City - 1</p>
+        </div>
+        <div class="col-md-2"></div>
+
       </div>
     </div>
     <div class="col-md-3">
@@ -202,11 +218,11 @@
           </div>
         </div>
         <div class="modal-body" style="background-color: whitesmoke">
-          <h3 id="home">  </h3>
-          <h1 id="homeWinner" class="text-success text-center"> ${result == 1? "Home Team Wins" : ""} </h1>
+          <h2 id="home">  </h2>
+          <h2 id="homeWinner" class="text-success text-center"> ${result == 1? "Home Team Wins" : ""} </h2>
           <h1 id="result" class="text-success text-center"> ${result == 2? "Draw" : ""} </h1>
-          <h1 id="away">  </h1>
-          <h1 id="awayWinner" class="text-success text-center"> ${result == 3? "Away Team Wins" : ""} </h1>
+          <h2 id="away">  </h2>
+          <h2 id="awayWinner" class="text-success text-center"> ${result == 3? "Away Team Wins" : ""} </h2>
         </div>
         <div class="modal-footer" style="background-color: whitesmoke">
           <div class="col-md-4"></div>
@@ -322,20 +338,38 @@
           </div>
         </div>
         <div class="modal-body" style="background-color: whitesmoke">
-          <%
-                double [][] modifiedResultss  = (double[][]) request.getAttribute("modifiedResult");
-                String result="";
-                if(modifiedResultss != null) {
-                  for (int i = 0; i < 1; i++) {
-                    for (int j = 0; j < 10; j++) {
-                      result = String.valueOf(modifiedResultss[i][j]);
-                      out.println(result);
-                      out.println("");
-                    }
-                  }
-                }
-          %>
-          ${modifiedResult}
+          <table class="table">
+            <thead>
+            <tr>
+              <th class="text-center">Home Win</th>
+              <th class="text-center">Draw</th>
+              <th class="text-center">Away Win</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr class="text-center">
+              <td class="text-center">
+                <%
+                  double [][] winResult  = (double[][]) request.getAttribute("modifiedResult");
+                  out.println(winResult[0][0]);
+                %>
+              </td>
+              <td class="text-center">
+                <%
+                  double [][] drawResult  = (double[][]) request.getAttribute("modifiedResult");
+                  out.println(drawResult[0][1]);
+                %>
+              </td>
+              <td class="text-center">
+                <%
+                  double [][] loseResult  = (double[][]) request.getAttribute("modifiedResult");
+                  out.println(loseResult[0][2]);
+                %>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+
         </div>
       </div>
     </div>
@@ -384,7 +418,6 @@
             <h3 class="modal-title text-success pull-right">Adjusted Weight 2</h3>
           </div>
           <div class="col-md-4 no-pad">
-            <%--<button type="button" class="btn btn-danger pull-right" data-dismiss="modal">Close</button>--%>
               <button type="button" class="close pull-right" data-dismiss="modal">&times;</button>
           </div>
         </div>

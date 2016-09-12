@@ -169,7 +169,6 @@ public class Main extends javax.servlet.http.HttpServlet {
         else{
             result = 3;
         }
-        request.setAttribute("theta1",theta1DoubleArray);
         request.setAttribute("map",map);
         request.setAttribute("theta1",theta1DoubleArray);
         request.setAttribute("theta2",theta2DoubleArray);
